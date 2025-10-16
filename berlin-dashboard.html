@@ -1,69 +1,119 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Monday Checklist</title>
+  <title>Berlin’s Weekly Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .day-section { display: none; }
+    .day-section.active { display: block; }
+    .day-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .day-tabs button {
+      background-color: #c8e6c9;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #2e7d32;
+      cursor: pointer;
+    }
+    .day-tabs button.active {
+      background-color: #81c784;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <h1>🌞 Monday Checklist</h1>
+  <h1>🌲 Berlin’s Weekly Dashboard</h1>
 
-  <div class="section">
-    <h2>🕕 6:00 AM – Morning Start</h2>
-    <div class="task"><input type="checkbox" /> Wake up</div>
-    <div class="task"><input type="checkbox" /> Make bed</div>
-    <div class="task"><input type="checkbox" /> Feed animals</div>
-    <div class="task"><input type="checkbox" /> Take shower</div>
-    <div class="task"><input type="checkbox" /> Eat breakfast</div>
-    <div class="task"><input type="checkbox" /> Brush hair</div>
-    <div class="task"><input type="checkbox" /> Brush teeth</div>
-    <div class="task"><input type="checkbox" /> Clean bathroom, kitchen, table</div>
+  <div class="day-tabs">
+    <button onclick="showDay('monday')" class="active">Monday</button>
+    <button onclick="showDay('tuesday')">Tuesday</button>
+    <button onclick="showDay('wednesday')">Wednesday</button>
+    <button onclick="showDay('thursday')">Thursday</button>
+    <button onclick="showDay('friday')">Friday</button>
   </div>
 
-  <div class="section">
-    <h2>🧘 7:00 AM – Mind & Body</h2>
-    <div class="task"><input type="checkbox" /> 15 min Yoga</div>
-    <div class="task"><input type="checkbox" /> 10 min Meditation</div>
-    <div class="task"><input type="checkbox" /> Watch 1 video on time management/productivity/goal setting</div>
-    <div class="task"><input type="checkbox" /> Morning Thoughts Notebook (15 min, outside if sunny)</div>
-    <ul>
-      <li>What yoga move felt the best?</li>
-      <li>What happened to your mind during meditation?</li>
-      <li>What did you learn in your video?</li>
-      <li>What are you grateful for?</li>
-      <li>Do you have a goal for today?</li>
-      <li>What is the weather like and what is the date?</li>
-    </ul>
+  <!-- MONDAY -->
+  <div id="monday" class="day-section active">
+    <h2>🌞 Monday</h2>
+
+    <div class="section">
+      <h3>🕕 6:00 AM – Morning Start</h3>
+      <div class="task"><input type="checkbox" /> Wake up</div>
+      <div class="task"><input type="checkbox" /> Make bed</div>
+      <div class="task"><input type="checkbox" /> Feed animals</div>
+      <div class="task"><input type="checkbox" /> Take shower</div>
+      <div class="task"><input type="checkbox" /> Eat breakfast</div>
+      <div class="task"><input type="checkbox" /> Brush hair</div>
+      <div class="task"><input type="checkbox" /> Brush teeth</div>
+      <div class="task"><input type="checkbox" /> Clean bathroom, kitchen, table</div>
+    </div>
+
+    <div class="section">
+      <h3>🧘 7:00 AM – Mind & Body</h3>
+      <div class="task"><input type="checkbox" /> 15 min Yoga</div>
+      <div class="task"><input type="checkbox" /> 10 min Meditation</div>
+      <div class="task"><input type="checkbox" /> Watch 1 video on time management/productivity/goal setting</div>
+      <div class="task"><input type="checkbox" /> Morning Thoughts Notebook (15 min, outside if sunny)</div>
+      <ul>
+        <li>What yoga move felt the best?</li>
+        <li>What happened to your mind during meditation?</li>
+        <li>What did you learn in your video?</li>
+        <li>What are you grateful for?</li>
+        <li>Do you have a goal for today?</li>
+        <li>What is the weather like and what is the date?</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>📖 8:00 AM – Reading</h3>
+      <div class="task"><input type="checkbox" /> 20 min – Read Mom-assigned book</div>
+      <div class="task"><input type="checkbox" /> 15 min – Notes in notebook (“Notes on MOM BOOK – page numbers – date”)</div>
+    </div>
+
+    <div class="section">
+      <h3>🧹 8:45 AM – Morning Chores</h3>
+      <div class="task"><input type="checkbox" /> Complete daily chores</div>
+    </div>
+
+    <div class="section">
+      <h3>📚 9:00 AM – Assignments</h3>
+      <div class="task"><input type="checkbox" /> Home Economics: Get ready, practice Sunday’s hair video</div>
+      <div class="task"><input type="checkbox" /> Watch 1 Home Ec video and record what you learned</div>
+      <div class="task"><input type="checkbox" /> 30 min – Khan Academy Reading & Vocab</div>
+      <div class="task"><input type="checkbox" /> 30 min – Khan Academy US History</div>
+      <div class="task"><input type="checkbox" /> 15 min – No talk break + drink water + reread morning thoughts</div>
+      <div class="task"><input type="checkbox" /> 30 min – Khan Academy Chemistry</div>
+      <div class="task"><input type="checkbox" /> 30 min – Khan Academy 4th Grade Math</div>
+      <div class="task"><input type="checkbox" /> 15 min – Multiplication flash cards</div>
+    </div>
+
+    <div class="section">
+      <h3>🍽️ 12:30 PM – Afternoon</h3>
+      <div class="task"><input type="checkbox" /> Lunch</div>
+      <div class="task"><input type="checkbox" /> After-lunch chores</div>
+      <div class="task"><input type="checkbox" /> Reading of your choice</div>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>📖 8:00 AM – Reading</h2>
-    <div class="task"><input type="checkbox" /> 20 min – Read Mom-assigned book</div>
-    <div class="task"><input type="checkbox" /> 15 min – Notes in notebook (“Notes on MOM BOOK – page numbers – date”)</div>
-  </div>
-
-  <div class="section">
-    <h2>🧹 8:45 AM – Morning Chores</h2>
-    <div class="task"><input type="checkbox" /> Complete daily chores</div>
-  </div>
-
-  <div class="section">
-    <h2>📚 9:00 AM – Monday Assignments</h2>
-    <div class="task"><input type="checkbox" /> Home Economics: Get ready, practice Sunday’s hair video</div>
-    <div class="task"><input type="checkbox" /> Watch 1 Home Ec video and record what you learned</div>
-    <div class="task"><input type="checkbox" /> 30 min – Khan Academy Reading & Vocab</div>
-    <div class="task"><input type="checkbox" /> 30 min – Khan Academy US History</div>
-    <div class="task"><input type="checkbox" /> 15 min – No talk break + drink water + reread morning thoughts</div>
-    <div class="task"><input type="checkbox" /> 30 min – Khan Academy Chemistry</div>
-    <div class="task"><input type="checkbox" /> 30 min – Khan Academy 4th Grade Math</div>
-    <div class="task"><input type="checkbox" /> 15 min – Multiplication flash cards</div>
-  </div>
-
-  <div class="section">
-    <h2>🍽️ 12:30 PM – Afternoon</h2>
-    <div class="task"><input type="checkbox" /> Lunch</div>
-    <div class="task"><input type="checkbox" /> After-lunch chores</div>
-    <div class="task"><input type="checkbox" /> Reading of your choice</div>
-  </div>
+  <script>
+    function showDay(dayId) {
+      document.querySelectorAll('.day-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.querySelectorAll('.day-tabs button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(dayId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 </html>
-
