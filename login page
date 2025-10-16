@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Berlin Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-box">
+    <h1>Welcome, Berlin 🌸</h1>
+    <div class="motivation">“Get after it girl, you’ve got a world to change 💪🌎”</div>
+    <input type="text" placeholder="Username" />
+    <input type="password" placeholder="Password" />
+    <button onclick="login()">Log In</button>
+    <div class="parent-toggle">
+      <label><input type="checkbox" id="parentMode" /> Parent Mode</label>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
